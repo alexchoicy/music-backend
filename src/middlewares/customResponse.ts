@@ -7,7 +7,7 @@ export function customResponse(req: Request, res: Response, next: NextFunction) 
 	res.apiResponse = function <T>(
 		statusCode: StatusCodes,
 		data: T,
-		status: ApiResponseStatus,
+		status: ApiResponseStatus = ApiResponseStatus.SUCCESS,
 		message?: string
 	) {
 		const response: ApiResponse<T> = {
